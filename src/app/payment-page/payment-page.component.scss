@@ -1,0 +1,76 @@
+.offcanvas-bottom{
+    height: 40vh;
+    width: 50%;
+    margin: 0 auto;
+}
+.offcanvas-body{
+    transform: translate(7%, 10%);
+}
+
+.bankDetail{
+    list-style: none;
+    li{
+        margin: 20px;
+    }
+}
+.card{
+    margin-top: 20px;
+    .card-body{
+        height: 37vh;
+    }
+}
+button.btn.btn-outline-default {
+    width: 150px;
+    text-align: left;
+}
+
+embed{
+    width: 100%;
+    height:35vh;
+}
+
+.clsBtn{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+     text-align: right;
+     color: orange;
+    margin: 10px 0px -20px -10px;
+    position: absolute;
+}
+
+.bank{
+    color: cornflowerblue;;
+}
+.credit{
+    color: darkred;;
+}
+.debit{
+    color: yellowgreen;;
+}
+.upi{
+    color: green;;
+}
+.eth{
+    color: cornflowerblue;;
+}
+
+#cryptoDet{
+    width: 100%;
+    margin-top: 5vh;
+    td, th{
+        border: 0.5px solid #ccc;
+        border-collapse: collapse;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        img{
+            width: 14px;
+        }
+    } 
+}
+h4{
+    margin: 10px;
+    text-align: center;
+    color: orange;
+}

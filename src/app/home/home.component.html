@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+        <a href="#" [routerLink]="'/about'">About</a>
+        <a href="#" [routerLink]="'/advent'">Alti Wallet</a>
+        <a href="#">Payment Channel</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" (click)="openNav()">☰</button>
+        <h4 class="text-left"><span class="altiLogo">A</span> Alti Retail</h4>
+        <div class="row">
+
+            <div class="col-3" *ngFor="let i of data;">
+                <div class="card">
+                    <img class="card-img-top" [src]="i.thumbnail" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.title}}</h5>
+                        <!-- <p class="card-text">{{i.description}}</p> -->
+                        <div class="card insideCard">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="price">Price</p>
+                                        <p class="amount">{{(i.price/10000)}} ETH</p>
+                                    </div>
+                                    <div class="col-md-6 buyBtn">
+                                        <a href="#" class="btn btn-default orangeBtn" (click)="openPopup(i.price /10000)">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="popup-wrapper" *ngIf="openPopups">
+    <div class="cards">
+        <app-payment-page [ethValue]="ethVal" (closePopup)="closePop($event)"></app-payment-page>
+    </div>
+</div>

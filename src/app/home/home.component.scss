@@ -1,0 +1,137 @@
+.container{
+    padding-bottom: 30px;
+}
+.card{
+    margin-top: 2vw;
+    padding: 10px;
+    p{
+        margin:0;
+    }
+    .amount{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .buyBtn{
+        text-align: center;
+    }
+    .price{
+        color: #7b7a7a;
+    }
+    .card-text{
+        height: 10vh;
+        overflow: hidden;
+    }
+    .card-img-top{
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .card-title{
+        font-size: 16px;
+    }
+}
+.text-left{
+    margin-top: 20px;
+}
+.altiLogo{
+    padding: 0 10px;
+    background: orange;
+    border-radius: 7px;
+    color: #fff;
+}
+
+
+.insideCard{
+    .card-body{
+        padding: 0;
+    }
+    .row{
+        justify-content: center;
+        align-items: center;
+    }
+    .orangeBtn{
+        background: orange;
+    color: #fff;
+     width: 60px;
+    padding: 2px;
+    }
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    float: right;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  .popup-wrapper{
+    position: absolute;
+    top: 0;
+    background: rgb(0 0 0 / 75%);
+    height: 100%;
+    left: 0;
+    right: 0;
+    .cards{
+        width: 50%;
+        margin: 0 auto;
+        transform: translate(10px, 50%);
+        background: #fff;
+        border-radius: 10px;
+        ul{
+            padding: 0;
+        }
+    }
+  }
