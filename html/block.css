@@ -1,0 +1,73 @@
+input{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+ }
+ 
+body{
+    text-align: center !important;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 18px;
+    color: orange;
+}
+.head{
+     font-size: 18px;
+    font-weight: 500;
+    margin: 18px 0;
+    color: orange;
+    display: block;
+    text-align: center;
+}
+.orangeBtn{
+    background: orange;
+color: #fff !important;
+ width: 60px;
+padding: 2px !important;
+}
+
+#successmsg h4{
+    color: green;
+    margin: 20px;
+}
+
+#paymentPage, #successmsg{
+    display: none;
+}
+
+img{
+    width: 6vw;
+    margin-right: 10px;
+}
+ul{
+    padding-left: 60px;
+    list-style: none;
+    text-align: left;
+}
+li{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px;
+    display: inline-block;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+td{
+    border: 0.5px solid #ccc;
+    border-collapse: collapse;
+    padding: 10px
+}
+
+ 
