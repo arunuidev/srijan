@@ -6,16 +6,14 @@ import { AppComponent } from './app.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HexagonComponent } from './hexagon/hexagon.component';
-import { AdventCodeComponent } from './advent-code/advent-code.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaymentPageComponent,
-    HomeComponent,
-    HexagonComponent,
-    AdventCodeComponent
+    HomeComponent, 
+    WalletComponent
   ],
   imports: [
     BrowserModule,

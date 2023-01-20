@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiServiceService {
+  configUrl = 'assets/data.json';
 
   constructor(private http:HttpClient) { }
 
@@ -26,7 +27,11 @@ export class ApiServiceService {
   }
 
   getConfig() {
-    return this.http.get<any>("https://dummyjson.com/products/category/smartphones");
+    return this.http.get<any>("https://fakestoreapi.com/products");
+  }
+
+  getatsConfig() {
+    return this.http.get<any>(this.configUrl);
   }
 
   postCoins(){

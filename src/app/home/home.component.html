@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
-        <a href="#" [routerLink]="'/about'">About</a>
-        <a href="#" [routerLink]="'/advent'">Alti Wallet</a>
-        <a href="#">Payment Channel</a>
+        <a href="#">About</a>
+        <a href="#">Alti Wallet</a>
+        <a href="#" [routerLink]="'/wallet'">Payment Channel</a>
         <a href="#">Contact</a>
     </div>
 
@@ -14,7 +14,7 @@
 
             <div class="col-3" *ngFor="let i of data;">
                 <div class="card">
-                    <img class="card-img-top" [src]="i.thumbnail" alt="Card image cap">
+                    <img class="card-img-top" [src]="'assets/'+i.image+'.png'" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{i.title}}</h5>
                         <!-- <p class="card-text">{{i.description}}</p> -->
@@ -23,10 +23,11 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <p class="price">Price</p>
-                                        <p class="amount">{{(i.price/10000)}} ETH</p>
+                                        <p class="amount">$ {{(i.price.toFixed(0))}}</p>
                                     </div>
                                     <div class="col-md-6 buyBtn">
-                                        <a href="#" class="btn btn-default orangeBtn" (click)="openPopup(i.price /10000)">Buy</a>
+                                        <a href="#" class="btn btn-default orangeBtn" (click)="openPopup(i.price)">Buy</a>
+                                        <a href="#" (click)="openDetail()">More.. </a>
                                     </div>
                                 </div>
                             </div>
@@ -43,5 +44,38 @@
 <div class="popup-wrapper" *ngIf="openPopups">
     <div class="cards">
         <app-payment-page [ethValue]="ethVal" (closePopup)="closePop($event)"></app-payment-page>
+    </div>
+</div>
+<div class="popup-wrapper details" *ngIf="openDetails">
+    <div class="cards">
+        <span (click)="closeDetails()"> X</span>
+
+        <h4>1) City Sweat Jogger</h4>
+        <ul class="first">
+            <li>Designed for Casual Comfort</li>
+            <li>Classic Tapered Fit</li>
+            <li>Soft, Stretch French Terry Fabric</li>
+            <li>Length: 27”, 29”, 32”</li>
+        </ul>
+
+        <h4>Materials:</h4>
+        <ol>
+            <li>Pocket lining: 86% Recycled polyester, 14% Elastane</li>
+            <li>Rib: 59% Cotton, 38% Polyester, 3% Elastane</li>
+            <li>Body: 52% Polyester, 42% Cotton, 6% Lycra® elastane</li>
+        </ol>
+        <h4>Product Features</h4>
+        <ol>
+            <li>Hand pockets with hidden phone and coin sleeves</li>
+            <li>Discreet back pocket</li>
+            <li>Waistband drawcord can be worn inside or out</li>
+            <li>Soft against skin</li>
+            <li>Four-way stretch</li>
+            <li>Quick-drying</li>
+            <li>Sweat-wicking</li>
+            <li>Naturally breathable</li>
+            <li>Added Lycra® fibre for stretch and shape retention</li>
+        </ol>
+
     </div>
 </div>
